@@ -35,7 +35,7 @@ class CurrencyController<ApplicationController
       
 
     #opening exchange rate data
-    @er_data=open("https://api.exchangerate.host/convert").read
+    @er_data=open("https://api.exchangerate.host/convert?from=USD&to=EUR").read
     @parsed_er_data=JSON.parse(@er_data)
     @er= @parsed_er_data.fetch("result")
 
